@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - PocketGem Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #1976d2;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        h2 {
+            color: #1976d2;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #424242;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .important {
+            background-color: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            margin: 20px 0;
+        }
+
+        .contact {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: November 1, 2025</p>
+
+        <div class="important">
+            <p><strong>Privacy First:</strong> PocketGem Agent is designed with privacy as the foundation. All AI inference runs entirely on your device using on-device Gemma models. We do not collect, store, or transmit your conversations, prompts, or documents to any servers operated by VaneSpark. Your data never leaves your device except when you explicitly choose to use optional network features.</p>
+        </div>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>1.1 Data You Provide</h3>
+        <p>PocketGem Agent is a privacy-first, offline-first application. All data you create is stored directly on your device:</p>
+        <ul>
+            <li><strong>Conversations:</strong> All chat messages, prompts, and AI responses are stored locally on your device</li>
+            <li><strong>Documents:</strong> PDF, DOCX, and TXT files you upload for RAG (Retrieval Augmented Generation) are processed and stored locally</li>
+            <li><strong>Model Files:</strong> Downloaded Gemma model weights are stored in your device's private app storage</li>
+            <li><strong>Settings:</strong> Your LLM parameters (temperature, top-p, top-k, max tokens, etc.) and preferences</li>
+            <li><strong>MCP Server Configuration:</strong> If you configure Model Context Protocol servers, their URLs and authentication headers are encrypted and stored locally</li>
+            <li><strong>Hugging Face Authentication:</strong> If you authenticate with Hugging Face to download models, your access token is encrypted and stored locally</li>
+        </ul>
+
+        <h3>1.2 Automatically Collected Information</h3>
+        <p><strong>We collect zero analytics, crash reports, or usage data.</strong> The app operates entirely offline by default and does not send any telemetry, diagnostics, or tracking data to our servers or any third parties.</p>
+
+        <h2>2. How We Use Your Information</h2>
+        <p>All data processing occurs locally on your device. Your information is used solely to:</p>
+        <ul>
+            <li>Generate AI responses using on-device Gemma models</li>
+            <li>Provide document-based question answering via local RAG (vector embeddings and semantic search)</li>
+            <li>Execute tool calls (calculator, time, weather, web search) when you request them</li>
+            <li>Connect to optional MCP servers you configure</li>
+            <li>Download model weights from Hugging Face (one-time setup)</li>
+            <li>Remember your conversations and settings across app sessions</li>
+        </ul>
+
+        <h2>3. Data Storage</h2>
+
+        <h3>3.1 Local Storage</h3>
+        <p>All your data is stored locally on your device:</p>
+        <ul>
+            <li><strong>Database:</strong> Conversations, messages, documents, and settings are stored in an encrypted Room database</li>
+            <li><strong>Model Files:</strong> Gemma model weights are stored in your device's private app storage directory, inaccessible to other applications</li>
+            <li><strong>Encrypted Credentials:</strong> MCP server headers and Hugging Face tokens are encrypted using Android Keystore with hardware-backed encryption (when available)</li>
+        </ul>
+
+        <h3>3.2 No Cloud Backups</h3>
+        <p>PocketGem Agent explicitly disables Android's cloud backup and device-to-device backup features to ensure your conversations and data never leave your device. If you uninstall the app, all local data is permanently deleted.</p>
+
+        <h2>4. Network Usage and Third-Party Services</h2>
+        <p>PocketGem Agent operates 100% offline for core AI functionality. Network access is only used for the following optional features:</p>
+
+        <h3>4.1 Hugging Face (Model Downloads)</h3>
+        <p>To download Gemma models, the app connects to Hugging Face:</p>
+        <ul>
+            <li><strong>What data is sent:</strong> Your Hugging Face access token (if you authenticate) or OAuth authorization (if you use OAuth login)</li>
+            <li><strong>Purpose:</strong> One-time download of gated Gemma model weights to your device</li>
+            <li><strong>After download:</strong> Models run entirely offline; no further communication with Hugging Face</li>
+            <li><strong>Hugging Face Privacy Policy:</strong> <a href="https://huggingface.co/privacy" target="_blank">https://huggingface.co/privacy</a></li>
+            <li><strong>Your control:</strong> Model downloads are user-initiated only; you can skip authentication and use non-gated models</li>
+        </ul>
+
+        <h3>4.2 Model Context Protocol (MCP) Servers (Optional)</h3>
+        <p>If you configure MCP servers for agent tool-calling:</p>
+        <ul>
+            <li><strong>What data is sent:</strong> Tool call requests (function name and arguments) to the MCP server URL you configure</li>
+            <li><strong>Purpose:</strong> Enable the AI agent to use external tools and APIs you choose to connect</li>
+            <li><strong>Your control:</strong> You manually add each MCP server; connections are user-initiated; you can enable "Offline-Only Mode" to block all MCP calls</li>
+            <li><strong>Privacy note:</strong> MCP servers are third-party services. Review the privacy policy of each MCP server you connect to</li>
+        </ul>
+
+        <h3>4.3 Web Search Tool (Optional)</h3>
+        <p>If you use the built-in web search tool:</p>
+        <ul>
+            <li><strong>What data is sent:</strong> Your search query to DuckDuckGo's search API</li>
+            <li><strong>Purpose:</strong> Retrieve current information from the web to enhance AI responses</li>
+            <li><strong>Privacy note:</strong> DuckDuckGo does not track searches or create user profiles</li>
+            <li><strong>DuckDuckGo Privacy Policy:</strong> <a href="https://duckduckgo.com/privacy" target="_blank">https://duckduckgo.com/privacy</a></li>
+            <li><strong>Your control:</strong> Web search is only used when you explicitly request current information; disable the tool in settings if you prefer</li>
+        </ul>
+
+        <h3>4.4 Google AI Edge LiteRT-LM (On-Device)</h3>
+        <p>The app uses Google's LiteRT-LM inference runtime for on-device AI:</p>
+        <ul>
+            <li><strong>Processing:</strong> All inference occurs entirely on your device</li>
+            <li><strong>No data transmission:</strong> LiteRT-LM does not send prompts, responses, or any data to Google servers</li>
+            <li><strong>Google AI Edge Terms:</strong> <a href="https://ai.google.dev/edge/litert/terms" target="_blank">https://ai.google.dev/edge/litert/terms</a></li>
+        </ul>
+
+        <h2>5. Data Sharing</h2>
+        <p><strong>We do not share, sell, or transmit your data to third parties.</strong></p>
+        <ul>
+            <li>We do not collect your conversations, prompts, or responses</li>
+            <li>We do not sell your data to advertisers or data brokers</li>
+            <li>We do not send usage analytics or crash reports to VaneSpark or any third party</li>
+            <li>The only network communication occurs when you explicitly enable optional features (model downloads, MCP servers, web search) as described above</li>
+        </ul>
+
+        <h2>6. Data Security</h2>
+        <p>We implement multiple layers of security to protect your data:</p>
+        <ul>
+            <li><strong>On-Device Processing:</strong> All AI inference runs locally; prompts never sent to cloud servers</li>
+            <li><strong>Encrypted Credentials:</strong> MCP headers and Hugging Face tokens encrypted using Android Keystore with hardware-backed keys (AES-256-GCM)</li>
+            <li><strong>Secure Storage:</strong> All files and databases stored in app-private directories inaccessible to other apps</li>
+            <li><strong>No Backups:</strong> Cloud and device backups explicitly disabled to prevent data exfiltration</li>
+            <li><strong>No Logging:</strong> Prompts, responses, and credentials are never logged to system logs or crash reports</li>
+        </ul>
+
+        <h2>7. Your Rights and Choices</h2>
+        <p>You have complete control over your data:</p>
+        <ul>
+            <li><strong>Access:</strong> View all your conversations, documents, and settings within the app at any time</li>
+            <li><strong>Export:</strong> Export conversations as text files to your device storage</li>
+            <li><strong>Delete:</strong> Clear conversation history, delete individual messages, or remove uploaded documents at any time</li>
+            <li><strong>Offline Mode:</strong> Enable "Offline-Only Mode" in settings to block all network access for MCP tools</li>
+            <li><strong>Revoke Credentials:</strong> Sign out of Hugging Face, delete MCP server configurations, or uninstall the app to remove all data</li>
+        </ul>
+
+        <h2>8. Children's Privacy</h2>
+        <p>PocketGem Agent is not directed to children under 13. We do not knowingly collect information from children under 13. The app is designed for general-purpose AI assistance and requires understanding of technical concepts like LLMs, MCP servers, and RAG.</p>
+
+        <h2>9. Data Retention</h2>
+        <p>Your data is retained on your device until you:</p>
+        <ul>
+            <li>Clear conversation history within the app</li>
+            <li>Delete individual messages or documents</li>
+            <li>Uninstall the app (permanently deletes all local data, models, and credentials)</li>
+        </ul>
+        <p>There is no cloud storage or server-side retention. Once data is deleted from your device, it cannot be recovered.</p>
+
+        <h2>10. International Users</h2>
+        <p>PocketGem Agent operates entirely on your device. Since we do not collect or transmit your conversational data to our servers, there are no international data transfer concerns for core AI functionality. If you use optional network features (Hugging Face, MCP servers, web search), you are subject to those services' data processing practices.</p>
+
+        <h2>11. Open Source and Transparency</h2>
+        <p>PocketGem Agent's source code is available for review. You can verify our privacy claims by inspecting the code. We believe in transparency and encourage security researchers to audit our privacy practices.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this policy periodically. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <div class="contact">
+            <h2>13. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or our privacy practices, please contact us:</p>
+            <p>
+                <strong>VaneSpark</strong><br>
+                Email: <a href="mailto:vanesparkapps@gmail.com">vanesparkapps@gmail.com</a>
+            </p>
+        </div>
+
+        <hr style="margin: 40px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+        <p style="text-align: center; color: #666; font-size: 0.9em;">
+            © 2025 VaneSpark. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>
